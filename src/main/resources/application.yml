@@ -9,7 +9,6 @@ spring:
 
 mybatis:
   mapper-locations: classpath:mapper/*.xml
-  #D:\code\demo\store\src\main\java\com\store\mapper\UserMapper.xml
   #type-aliases-package: com.crow.springboot.model
 
 
