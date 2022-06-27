@@ -5,37 +5,22 @@ import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
 
 import java.io.Serializable;
-
-//import java.time.LocalDateTime;
-//import java.util.Date;
-//import com.baomidou.mybatisplus.annotation.IdType;
-//import com.baomidou.mybatisplus.annotation.TableId;
-//import com.baomidou.mybatisplus.annotation.FieldFill;
-//import com.baomidou.mybatisplus.annotation.TableField;
+import java.util.Date;
 
 @Data
-@EqualsAndHashCode(callSuper = false)
-@Accessors(chain = true)
-public class User implements Serializable {
+//@EqualsAndHashCode(callSuper = false)
+//@Accessors(chain = true)
+public class User extends BaseEntity implements Serializable {
 
-//    private static final long serialVersionUID=1L;
-
-   // @TableId(value = "id", type = IdType.AUTO)
-    private Integer id;
-
-    private String userAccount;
-    private String userName;
+    private Integer uid;
+    private String username;
     private String password;
-    private String email;
+    private String salt;
     private String phone;
-    private String address;
+    private String email;
+    private Integer gender;
+    private String avatar;
+    private Integer isDelete;
 
-    //@TableField(fill = FieldFill.INSERT)
-    //private LocalDateTime createTime;
-    private String createTime;
-    
-    //@TableField(fill = FieldFill.INSERT_UPDATE)
-    //private LocalDateTime updateTime;   
-    private String updateTime;
 }
 

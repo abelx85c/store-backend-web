@@ -10,9 +10,11 @@ import com.store.service.ex.InsertException;
 import com.store.service.ex.UsernameDuplicatedException;
 import com.store.util.JsonResult;
 
+import javax.servlet.http.HttpSession;
+
 //@Controller
 @RestController //@Controller+@ResponseBody
-@RequestMapping("/user")
+@RequestMapping("/users")
 public class UserController extends BaseController{
     @Autowired
 	private IUserService userService;
@@ -40,9 +42,26 @@ public class UserController extends BaseController{
 	@RequestMapping("/reg")
 	public JsonResult<Void> reg(User user) {
 		System.out.println("====================");
-		System.out.println("user controller");
+		System.out.println("user controller reg");
 		System.out.println(user);
+
 		userService.reg(user);
 		return new JsonResult<>(ok);
+	}
+
+	@RequestMapping("/login")
+	public JsonResult<User> login(String username, String password, HttpSession session) {
+		System.out.println("====================");
+		System.out.println("user controller login");
+		System.out.println(username + "/" + password);
+
+		User data = userService.login(username, password);
+		session.setAttribute("uid", data.getUid());
+		session.setAttribute("username", data.getUsername());
+
+		System.out.println("uid: " + getuidFromSession(session));
+		System.out.println("username: " + getUsernameFromSession(session));
+
+		return new JsonResult<User>(ok, data);
 	}
 }

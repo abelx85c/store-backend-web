@@ -8,8 +8,8 @@ import org.mybatis.spring.annotation.MapperScan;
 
 @SpringBootApplication
 @ComponentScan(basePackages= {"com.store.controller"})
+@MapperScan(basePackages= {"com.store.mapper"})
 @ComponentScan("com.store.service")
-@MapperScan("com.store.mapper")
 //@ComponentScan("com.store.repository")
 public class StoreApplication {
 
