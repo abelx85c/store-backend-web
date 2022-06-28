@@ -5,14 +5,14 @@
 
 <mapper namespace="com.store.mapper.UserMapper">
 
-	<!--<resultMap id="UserEntityMap" type="com.store.entity.User">-->
-		<!--<id column="uid" property="uid"></id>-->
-		<!--<result column="is_delete" property="isDelete"></result>-->
-		<!--<result column="created_user" property="createdUser"></result>-->
-		<!--<result column="created_time" property="createdTime"></result>-->
-		<!--<result column="modified_user" property="modifiedUser"></result>-->
-		<!--<result column="modified_time" property="modifiedTime"></result>-->
-	<!--</resultMap>-->
+	<resultMap id="UserEntityMap" type="com.store.entity.User">
+		<id column="uid" property="uid"></id>
+		<result column="is_delete" property="isDelete"></result>
+		<result column="created_user" property="createdUser"></result>
+		<result column="created_time" property="createdTime"></result>
+		<result column="modified_user" property="modifiedUser"></result>
+		<result column="modified_time" property="modifiedTime"></result>
+	</resultMap>
 
 	<insert id="insert" useGeneratedKeys="true" keyProperty="uid">
         INSERT INTO t_user(
@@ -32,13 +32,13 @@
         )
 	</insert>
 
-	<select id="findByUsername" resultType="com.store.entity.User">
-	    SELECT * FROM t_user WHERE username = #{username}
-	</select>
+	<!--<select id="findByUsername" resultType="com.store.entity.User">-->
+	    <!--SELECT * FROM t_user WHERE username = #{username}-->
+	<!--</select>-->
 
 
-    <!--<select id="findByUsername" resultType="UserEntityMap">-->
-    <!--SELECT * FROM t_user WHERE username = #{username}-->
-    <!--</select>-->
+    <select id="findByUsername" resultMap="UserEntityMap">
+    SELECT * FROM t_user WHERE username = #{username}
+    </select>
 
 </mapper>
