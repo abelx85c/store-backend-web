@@ -1,0 +1,39 @@
+spring:
+  datasource:
+    #type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://10.10.10.22:3306/store?chartacterEnconding=UTF-8
+    username: root
+    password:
+
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  #type-aliases-package: com.crow.springboot.model
+#mybatis-plus:
+#  mapper-locations: classpath:mapper/*.xml
+
+#logging:
+#  pattern:
+#    console: '%d{yyyy-MMM-dd HH:mm:ss.SSS} %-5level [%thread] %logger{15} - %msg%n'
+#    file: '%d{yyyy-MMM-dd HH:mm:ss.SSS} %-5level [%thread] %logger{15} - %msg%n' 
+#  file:
+#    path: log/
+#  level:
+#    root: error
+  
+  
+  #上傳文件的路徑
+#  photo:
+#    file:
+#      dir: D:\code\demo\store\photos
+
+#  #thymeleaf 熱部屬
+#  thymeleaf:
+#    cache: false
+#  #修改靜態資源的訪問路徑
+#  web:
+#    resources:
+#      static-locations: classpath:/static/,file:${photo.file.dir}
+#
+
