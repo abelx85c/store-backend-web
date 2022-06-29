@@ -3,16 +3,14 @@ package com.store.service.impl;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.UUID;
-import com.store.service.ex.PasswordNotMatchException;
-import com.store.service.ex.UserNotFoundException;
+
+import com.store.service.ex.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.store.entity.User;
 import com.store.mapper.UserMapper;
 import com.store.service.IUserService;
-import com.store.service.ex.InsertException;
-import com.store.service.ex.UsernameDuplicatedException;
 import org.springframework.util.DigestUtils;
 
 
@@ -56,7 +54,7 @@ public class UserServiceImpl implements IUserService{
 		if (rows != 1) {
 			throw new InsertException("註冊產生異常");
 		}
-		System.out.println("user mapper response: " + rows);
+		System.out.println("user mapper response reg: " + rows);
 	}
 
 	@Override
@@ -79,6 +77,32 @@ public class UserServiceImpl implements IUserService{
 
 		return user;
 	}
+
+
+	@Override
+	public void changePassword(Integer uid, String username, String oldPassword, String newPassword) {
+		System.out.println("=============================");
+		System.out.println("user service changePassword");
+		User result = userMapper.findByUid(uid);
+
+		if(result == null || result.getIsDelete() == 1){
+			throw new UserNotFoundException("使用者不存在");
+		}
+
+		if(!result.getPassword().equals(oldPassword)){
+			throw new PasswordNotMatchException("密碼錯誤");
+		}
+
+		Integer rows = userMapper.updatePasswordByUid(uid, newPassword, username, new Date());
+
+
+		if(rows != 1){
+			throw new UpdateException("更新資料產生未知異常");
+		}
+
+		System.out.println("user mapper response changePassword: " + rows);
+	}
+
 
 
 	private String getMD5Password(String password, String salt) {
