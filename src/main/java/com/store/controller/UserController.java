@@ -1,5 +1,6 @@
 package com.store.controller;
 
+import org.apache.coyote.http11.HttpOutputBuffer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -65,5 +66,11 @@ public class UserController extends BaseController{
 		return new JsonResult<User>(ok, data);
 	}
 
-
+    @RequestMapping("/change_password")
+	public JsonResult<Void> changePassword(String oldPassword, String newPassword, HttpSession session){
+		Integer uid = getuidFromSession(session);
+		String username = getUsernameFromSession(session);
+		userService.changePassword(uid, username, oldPassword, newPassword);
+		return new JsonResult<>(ok);
+	}
 }
