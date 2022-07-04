@@ -50,6 +50,24 @@ public class UserServiceTest {
     }
 
 	@Test
+	public void login(){
+		System.out.println("================");
+		System.out.println("測試使用者登入");
+		try {
+			User user = new User();
+			user.setUsername("test_8eb");
+			user.setPassword("123");
+
+
+			this.userService.login(user.getUsername(), user.getPassword());
+			System.out.println("使用者登入成功");
+		}catch(ServiceException e){
+				System.out.println(e.getClass().getSimpleName());
+				System.out.println(e.getMessage());
+		}
+	}
+
+	@Test
     public void changePassword(){
 		userService.changePassword(6, "UserServiceTest", "123", "000");
 	}

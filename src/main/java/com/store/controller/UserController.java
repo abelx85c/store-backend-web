@@ -29,10 +29,10 @@ public class UserController extends BaseController{
 //    	try {
 //			userService.reg(user);
 //			result.setState(200);
-//			result.setMessage("使用者註冊成功");
+//			result.setMessage("註冊成功");
 //		}catch(UsernameDuplicatedException e) {
 //			result.setState(4000);
-//			result.setMessage("使用者已註冊");
+//			result.setMessage("已註冊");
 //		}catch(InsertException e) {
 //			result.setState(5000);
 //			result.setMessage("寫入資料庫異常");
