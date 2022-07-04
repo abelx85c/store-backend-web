@@ -51,6 +51,6 @@ public class UserServiceTest {
 
 	@Test
     public void changePassword(){
-		userService.changePassword(5, "UserServiceTest", "123", "000");
+		userService.changePassword(6, "UserServiceTest", "123", "000");
 	}
 }

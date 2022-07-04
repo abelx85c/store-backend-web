@@ -64,4 +64,6 @@ public class UserController extends BaseController{
 
 		return new JsonResult<User>(ok, data);
 	}
+
+
 }
