@@ -54,14 +54,17 @@ public class UserController extends BaseController{
 	public JsonResult<User> login(String username, String password, HttpSession session) {
 		System.out.println("====================");
 		System.out.println("user controller login");
-		System.out.println(username + "/" + password);
+		System.out.println("username from param: " + username);
+		System.out.println("password from param: " + password);
 
 		User data = userService.login(username, password);
+		System.out.println("uid from login service: " + data.getUid());
+		System.out.println("username from login service: " + data.getUsername());
 		session.setAttribute("uid", data.getUid());
 		session.setAttribute("username", data.getUsername());
 
-		System.out.println("uid: " + getuidFromSession(session));
-		System.out.println("username: " + getUsernameFromSession(session));
+		System.out.println("uid getuidFromSession: " + getuidFromSession(session));
+		System.out.println("username getUsernameFromSession: " + getUsernameFromSession(session));
 
 		return new JsonResult<User>(ok, data);
 	}

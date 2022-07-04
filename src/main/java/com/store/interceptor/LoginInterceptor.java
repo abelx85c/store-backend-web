@@ -12,11 +12,17 @@ public class LoginInterceptor implements HandlerInterceptor {
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
+        System.out.println("===========================");
+        System.out.println("LoginInterceptor preHandle");
         Object obj = request.getSession().getAttribute("uid");
+        System.out.println("request getSession getAttribute uid: " + obj);
         if( obj == null ){
-            response.sendRedirect("/web/login.html");
-            return false;
+            System.out.println("request getSession getAttribute uid == null");
+            //response.sendRedirect("/web/login.html");
+            //return false;
         }
+
+
         return true;
     }
 }

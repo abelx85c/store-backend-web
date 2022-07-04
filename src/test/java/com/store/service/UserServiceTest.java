@@ -57,10 +57,9 @@ public class UserServiceTest {
 			User user = new User();
 			user.setUsername("test_8eb");
 			user.setPassword("123");
-
-
 			this.userService.login(user.getUsername(), user.getPassword());
 			System.out.println("使用者登入成功");
+
 		}catch(ServiceException e){
 				System.out.println(e.getClass().getSimpleName());
 				System.out.println(e.getMessage());
