@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4f28d0a7-4096-4477-9299-dd6aab4d7ee8" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/store/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/store/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/store/interceptor/LoginInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/store/interceptor/LoginInterceptor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/store/service/UserServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/store/service/UserServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -302,15 +301,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "last_opened_file_path": "D:/code/demo/store",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "editor.preferences.fonts.default"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;last_opened_file_path&quot;: &quot;D:/code/demo/store&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\code\demo\store\src\main\java\com\store" />
@@ -324,41 +323,23 @@
       <recent name="D:\code\demo\store\src\main\resources\mapper" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.UserServiceTest.changePassword">
-    <configuration default="true" type="Application" factoryName="Application">
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="StoreApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.StoreApplication">
+    <configuration name="StoreApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.store.StoreApplication" />
       <module name="store" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.store.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.store" />
-      <option name="MAIN_CLASS_NAME" value="com.store.StoreApplicationTests" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserMapperTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="store" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.store.mapper.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.store.mapper" />
-      <option name="MAIN_CLASS_NAME" value="com.store.mapper.UserMapperTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -391,6 +372,23 @@
       <option name="PACKAGE_NAME" value="com.store.service" />
       <option name="MAIN_CLASS_NAME" value="com.store.service.UserServiceTest" />
       <option name="METHOD_NAME" value="changePassword" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceTest.login" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="store" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.store.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.store.service" />
+      <option name="MAIN_CLASS_NAME" value="com.store.service.UserServiceTest" />
+      <option name="METHOD_NAME" value="login" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <method v="2">
@@ -435,19 +433,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.StoreApplicationTests" />
-      <item itemvalue="JUnit.UserMapperTest" />
+      <item itemvalue="Application.StoreApplication" />
+      <item itemvalue="JUnit.UserServiceTest.login" />
       <item itemvalue="JUnit.UserMapperTest.updatePasswordByUid" />
       <item itemvalue="JUnit.UserServiceTest.reg" />
       <item itemvalue="JUnit.UserServiceTest.changePassword" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.StoreApplication" />
+        <item itemvalue="JUnit.UserServiceTest.login" />
         <item itemvalue="JUnit.UserServiceTest.changePassword" />
         <item itemvalue="JUnit.UserServiceTest.reg" />
         <item itemvalue="JUnit.UserMapperTest.updatePasswordByUid" />
-        <item itemvalue="JUnit.UserMapperTest" />
-        <item itemvalue="JUnit.StoreApplicationTests" />
       </list>
     </recent_temporary>
   </component>
@@ -469,6 +467,14 @@
       <workItem from="1655967034716" duration="33281000" />
       <workItem from="1656399519048" duration="16267000" />
     </task>
+    <task id="LOCAL-00001" summary="修改密碼單元測試">
+      <created>1656901789901</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1656901789901</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -545,6 +551,21 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="修改密碼單元測試" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改密碼單元測試" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
